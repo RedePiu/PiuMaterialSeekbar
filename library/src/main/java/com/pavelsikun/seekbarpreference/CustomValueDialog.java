@@ -3,6 +3,7 @@ package com.pavelsikun.seekbarpreference;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.util.TypedValue;
@@ -70,7 +71,7 @@ class CustomValueDialog {
     private int fetchAccentColor(Context context) {
         TypedValue typedValue = new TypedValue();
 
-        TypedArray a = context.obtainStyledAttributes(typedValue.data, new int[] { R.attr.colorAccent });
+        TypedArray a = context.obtainStyledAttributes(typedValue.data, new int[] { Color.parseColor("#607D8B") });
         int color = a.getColor(0, 0);
         a.recycle();
 
